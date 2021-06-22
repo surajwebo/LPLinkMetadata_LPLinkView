@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     @IBAction func getUrlPreview(_ sender: Any) {
         let metadataProvider = LPMetadataProvider()
         guard var urlStr = urlTextField.text, urlStr.isValidURL else {
+            print("Invalid URL inserted in TextField")
             return
         }
         if !urlStr.contains("http") || !urlStr.contains("https") {
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
         let url = URL(string: urlStr)! //"https://developer.apple.com/documentation/linkpresentation/lplinkmetadata"
         metadataProvider.startFetchingMetadata(for: url) { metadata, error in
             if error != nil {
+                print("Error occurred while fetching metadata from url - \(String(describing: error?.localizedDescription))")
                 return
             }
             // self.linkView = LPLinkView(url: url)
