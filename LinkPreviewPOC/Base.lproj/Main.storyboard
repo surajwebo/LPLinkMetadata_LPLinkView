@@ -26,7 +26,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-Kd-9Er">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://youtu.be/hoNb6HuNmU0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-Kd-9Er">
                                         <rect key="frame" x="0.0" y="30.5" width="374" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="kVZ-On-mlz"/>
@@ -36,13 +36,10 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jds-lW-526">
                                         <rect key="frame" x="0.0" y="74.5" width="374" height="40"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="GFh-SO-xRR"/>
                                         </constraints>
-                                        <state key="normal" title="FETCH PREVIEW">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
+                                        <state key="normal" title="FETCH PREVIEW"/>
                                         <connections>
                                             <action selector="getUrlPreview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qyc-So-33h"/>
                                         </connections>
@@ -67,6 +64,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="holderStackView" destination="AJB-mE-6iy" id="LBj-4N-Vsq"/>
                         <outlet property="urlLabel" destination="83f-kV-aHO" id="ejX-RZ-m0J"/>
                         <outlet property="urlTextField" destination="Kha-Kd-9Er" id="wKe-gf-Kqn"/>
                     </connections>

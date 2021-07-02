@@ -10,7 +10,7 @@ import LinkPresentation
 import MobileCoreServices
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var holderStackView: UIStackView!
     @IBOutlet weak var urlLabel: UILabel!
     @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var fetchPreviewBtn: UILabel!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     @IBAction func getUrlPreview(_ sender: Any) {
         if let urlStr = urlTextField.text {
             var holderView = UIView(frame:CGRect.zero)
-            holderView.frame = CGRect(x: 0, y: 350, width: self.view.frame.size.width, height: 100)
+            holderView.frame = CGRect(x: 0, y: holderStackView.frame.maxY+20, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.height-(holderStackView.frame.maxY+60))
             holderView = self.view.addURLPreview(urlString: urlStr, frames: holderView.frame)
             holderView.backgroundColor = .clear
             self.view.addSubview(holderView)
